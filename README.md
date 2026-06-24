@@ -43,11 +43,6 @@ A Tic-Tac-Toe game where a user can play against the computer. The AI selects mo
 * Winner detection
 * Draw detection
 * Input validation
-
-### Future Enhancement
-
-* Implement Minimax Algorithm to make the AI unbeatable.
-
 ---
 
 ## Task 4: Movie Recommendation System
