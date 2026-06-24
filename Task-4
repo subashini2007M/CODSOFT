@@ -1,0 +1,25 @@
+import pandas as pd
+
+# Dataset
+movies = {
+    "Movie": ["Avengers", "John Wick", "Titanic",
+              "The Notebook", "Conjuring", "Insidious"],
+    "Genre": ["Action", "Action", "Romance",
+              "Romance", "Horror", "Horror"]
+}
+
+df = pd.DataFrame(movies)
+
+print("Available Genres:")
+print(df["Genre"].unique())
+
+genre = input("\nEnter your favorite genre: ")
+
+recommendations = df[df["Genre"].str.lower() == genre.lower()]
+
+if not recommendations.empty:
+    print("\nRecommended Movies:")
+    for movie in recommendations["Movie"]:
+        print("-", movie)
+else:
+    print("No recommendations found.")
